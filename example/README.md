@@ -1,6 +1,6 @@
-# phone_state_i_example
+# incoming_call_event_example
 
-Demonstrates how to use the phone_state_i plugin.
+Demonstrates how to use the incoming_call_event plugin.
 
 ## Getting Started
 

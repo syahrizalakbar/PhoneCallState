@@ -3,12 +3,29 @@
 ## Listen to Phone Call State and provide call back
 
 ```
-import 'package:phone_state_i/phone_state_i.dart';
+import 'package:incoming_call_event/incoming_call_event.dart';
 
-phoneStateCallEvent.listen((PhoneStateCallEvent event) {
-      print('Call is Incoming/Connected' + event.stateC);
+...
+
+  StreamSubscription streamSubscription;
+
+  @override
+  void dispose() {
+    super.dispose();
+    streamSubscription.cancel();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    streamSubscription = incomingCallEvent.listen((IncomingCallEvent event) {
+      print('Call is Incoming or Connected' + event.stateC);
       //event.stateC has values "true" or "false"
-});
+    });
+  }
+
+...
+
 ```
 
 

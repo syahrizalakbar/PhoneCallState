@@ -1,6 +1,6 @@
 name: incoming_call_event
-description: Listen to Phone Call State and provide call back
-version: 0.0.2
+description: Listen to Phone Call State and provide call back, forked from phone_state_i
+version: 1.0.0
 homepage: https://github.com/syahrizalakbar/PhoneCallState
 
 dependencies:
