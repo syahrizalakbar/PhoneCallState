@@ -1,7 +1,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:phone_state_i/phone_state_i.dart';
+import 'package:incoming_call_event/incoming_call_event.dart';
 
 void main() {
   runApp(new MyApp());
@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    streamSubscription = phoneStateCallEvent.listen((PhoneStateCallEvent event) {
+    streamSubscription = incomingCallEvent.listen((IncomingCallEvent event) {
       print('Call is Incoming or Connected' + event.stateC);
       //event.stateC has values "true" or "false"
     });
